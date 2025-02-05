@@ -12,7 +12,7 @@ A **lightweight** **version** control system implemented in Python.
 
 ## 🚀 Installation & Setup
 
-1. **Download the `xcli` directory**
+1. **Download the `xcli` repository**
    
    Clone or download the repository and move it to your project.
 
@@ -53,7 +53,7 @@ A **lightweight** **version** control system implemented in Python.
     ```
     
     Open `index.html` in your browser or editor to verify changes.
-    
+
     `index.html` under development
 
    
