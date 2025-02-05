@@ -107,15 +107,16 @@
             return new Date(parseInt(year), parseInt(month) - 1, parseInt(day), parseInt(hours), parseInt(minutes));
         }
 
+
         document.getElementById('fileInput').addEventListener('change', function(e) {
-            const file = e.target.files[0];
+            const file = e.target.files[1];
             if (!file) return;
 
             const reader = new FileReader();
             reader.onload = function(e) {
                 parseAndDisplayCommits(e.target.result);
             };
-            reader.readAsText(file);
+            reader.readAsText(file); // add file [] to readAsText(file[0])
         });
 
         function parseAndDisplayCommits(content) {
