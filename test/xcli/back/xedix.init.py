@@ -28,19 +28,23 @@ with open("commits.txt", "a", encoding="utf-8") as commits_file:
             break
         
         file_names.append(file_name)
+        
 
     # Write the files to commits.txt
     if(exit):
         print("🚪 Exiting 'xcli' - No files added to the commit.")
+        
     else:    
         for file_name in file_names:
             commits_file.write(f"file: {file_name} [{current_time}]")
             commits_file.write("\n")
          # Commit message at the end
         message = input("📝 Commit message (some description): ").strip()
+        
         commits_file.write(f"\nfiles changed: {', '.join(file_names)}"+"\n")
         commits_file.write(f"commit: \"{message}\" at {current_time_only} on {current_date_only}")
         branch = input("🌿 Change branch(y/n): ").strip()
+        
 
         if branch.lower() == "y":
             name = input("🌿 Branch name(or 'xcli exit' to exit): ").strip()
