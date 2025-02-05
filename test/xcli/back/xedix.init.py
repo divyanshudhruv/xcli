@@ -6,7 +6,10 @@ with open("commits.txt", "a", encoding="utf-8") as commits_file:
     # Define the current time at the start, so it's available for both file processing and commit message
     current_time = tm.strftime("%H:%M %Y/%m/%d")
     current_time_only = tm.strftime("%H:%M")
+    
+    
     current_date_only = tm.strftime("%Y/%m/%d")
+    
     # Create a list to store file names
     file_names = []
 
@@ -14,6 +17,7 @@ with open("commits.txt", "a", encoding="utf-8") as commits_file:
     exit = False
     print("⚡ Welcome to 'xcli' - Let's start adding files to the commit.\n")
     while True:
+        
         file_name = input("📄 File name (or 'xcli commit' or 'xcli exit'): ").strip()
 
         if file_name.lower() == "xcli commit":
